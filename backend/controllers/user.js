@@ -4,9 +4,11 @@ const User = require("../model/user");
 const router = express.Router();
 const { upload } = require("../multer");
 const ErrorHandler = require("../utils/ErrorHandler");
-// const fs = require("fs");
-// const token = require("jsonwebtoken");
-// const sendMail = require("../utils/sendMail");
+const fs = require("fs");
+const token = require("jsonwebtoken");
+const catchAsyncErrors = require("../middleware/catchAsyncErrors");
+const sendMail = require("../utils/sendMail");
+const sendToken = require("../utils/jwtToken");
 // const filename = req.file.filename;
 
 router.post("/create-user", upload.single("file"), async (req, res, next) => {
@@ -19,8 +21,8 @@ router.post("/create-user", upload.single("file"), async (req, res, next) => {
       const filePath = `uploads/${filename}`;
       fs.unlink(filePath, (err) => {
         if (err) {
-          // console.log(err);
-          res.status(500).json({ message: "Deleting a file err" });
+          console.log(err);
+          res.status(500).json({ message: "Error deleting file" });
         }
       });
       return next(new ErrorHandler("User already exists", 400));
@@ -34,15 +36,64 @@ router.post("/create-user", upload.single("file"), async (req, res, next) => {
       password: password,
       avatar: fileUrl,
     };
-    const newUser = await User.create(user);
-    res.status(201).json({
-      success: true,
-      newUser,
-    });
+    // const newUser = await User.create(user);
+    // res.status(201).json({
+    //   success: true,
+    //   newUser,
+    // });
+    const activationToken = createActivationToken(user);
+    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+
+    try {
+      await sendMail({
+        email: user.email,
+        subject: "Activate your account",
+        message: `Hello ${user.name}, please click on this link to activate your account: ${activationUrl}`,
+      });
+      res.status(201).json({
+        success: true,
+        message: `${user.name}, please check your mail: - ${user.email} to activate your account!`,
+      });
+    } catch (error) {
+      return next(new ErrorHandler(error.message, 500));
+    }
   } catch (error) {
     return next(new ErrorHandler(error.message), 400);
   }
 });
+
+// activation token creation
+const createActivationToken = (user) => {
+  return token.sign(user, process.env.ACTIVATION_SECRET, {
+    expiresIn: "5m",
+  });
+};
+
+// activate user
+router.post(
+  "/activation",
+  catchAsyncErrors(async (req, res, next) => {
+    try {
+      const { activation_token } = req.body;
+      const newUser = token.verify(
+        activation_token,
+        process.env.ACTIVATION_SECRET
+      );
+      if (!newUser) {
+        return next(new ErrorHandler("Invalid token", 400));
+      }
+      const { name, email, password, avatar } = newUser;
+      User.create({
+        name,
+        email,
+        avatar,
+        password,
+      });
+      sendToken(newUser, 201, res);
+    } catch (error) {}
+    return next(new ErrorHandler(error.message, 500));
+  })
+);
 //     const activationToken = createActivationToken(user);
 //     const activationUrl = `http://localhost:3000/activation/${activationToken}`;
 

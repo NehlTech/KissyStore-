@@ -12,7 +12,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [avatar, setAvatar] = useState(null);
   const [visible, setVisible] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const fileInputChangeHandle = (e) => {
     const file = e.target.files[0];
@@ -30,9 +30,10 @@ const Signup = () => {
     axios
       .post(`${server}/user/create-user`, new_form, config)
       .then((res) => {
-        if (res.data.success === true) {
-          navigate("/");
-        }
+        //   if (res.data.success === true) {
+        //     navigate("/");
+        //   }
+        alert(res.message);
       })
       .catch((err) => {
         console.log(err);
