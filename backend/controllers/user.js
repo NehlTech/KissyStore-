@@ -9,6 +9,7 @@ const token = require("jsonwebtoken");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const sendMail = require("../utils/sendMail");
 const sendToken = require("../utils/jwtToken");
+const { isAuthenticated } = require("../middleware/authentication");
 // const filename = req.file.filename;
 
 router.post("/create-user", upload.single("file"), async (req, res, next) => {
@@ -52,7 +53,7 @@ router.post("/create-user", upload.single("file"), async (req, res, next) => {
       });
       res.status(201).json({
         success: true,
-        message: `${user.name}, please check your mail: - ${user.email} to activate your account!`,
+        message: `Activation link sent to your mail: - ${user.email}.`,
       });
     } catch (error) {
       return next(new ErrorHandler(error.message, 500));
@@ -69,7 +70,7 @@ const createActivationToken = (user) => {
   });
 };
 
-// activate user
+// user activation function
 router.post(
   "/activation",
   catchAsyncErrors(async (req, res, next) => {
@@ -101,34 +102,53 @@ router.post(
     }
   })
 );
-//     const activationToken = createActivationToken(user);
-//     const activationUrl = `http://localhost:3000/activation/${activationToken}`;
 
-//     try {
-//       await sendMail({
-//         email: user.email,
-//         subject: "Account activation",
-//         message: `Hello ${user.name}, please click on the link to activate your account: ${activationUrl}`,
-//       });
-//       res.status(201).json({
-//         success: true,
-//         message: `${user.name}, please check your mail: - ${user.email} to activate your account`,
-//       });
-//     } catch (error) {
-//       return next(new ErrorHandler(error.message, 500));
-//     }
-//   } catch (error) {
-//     return next(new ErrorHandler(error.message, 400));
-//   }
-// });
+// user login function
+router.post(
+  "/login-user",
+  catchAsyncErrors(async (req, res, next) => {
+    try {
+      const { email, password } = req.body;
 
-// // activation token creation
-// const createActivationToken = (user) => {
-//   return token.sign(user, process.env.ACTIVATION_SECRET, {
-//     expiresIn: "5m",
-//   });
-// };
+      if (!email || !password) {
+        return next(new ErrorHandler("Please fill all fields", 400));
+      }
+      const user = await User.findOne({ email }).select("password");
 
-// // user activation
+      if (!user) {
+        return next(new ErrorHandler("User does not exists!", 400));
+      }
+
+      const isPasswordValid = await user.comparePassword(password);
+      if (!isPasswordValid) {
+        return next(new ErrorHandler("Please provide valid information", 400));
+      }
+
+      sendToken(user, 201, res);
+    } catch (error) {
+      return next(new ErrorHandler(error.message, 500));
+    }
+  })
+);
+
+// load user function
+router.get(
+  "/getuser",
+  isAuthenticated,
+  catchAsyncErrors(async (req, res, next) => {
+    try {
+      const user = await User.findById(req.user.id);
+      if (!user) {
+        return next(new ErrorHandler("User does not exists!", 400));
+      }
+      res.status(200).json({
+        success: true,
+        user,
+      });
+    } catch (error) {
+      return next(new ErrorHandler(error.message, 500));
+    }
+  })
+);
 
 module.exports = router;

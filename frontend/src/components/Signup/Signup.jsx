@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { RxAvatar } from "react-icons/rx";
 import axios from "axios";
 import { server } from "../../server";
+import { toast } from "react-toastify";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -33,10 +34,15 @@ const Signup = () => {
         //   if (res.data.success === true) {
         //     navigate("/");
         //   }
-        alert(res.message);
+        toast.success(res.data.message);
+        setName("");
+        setEmail("");
+        setPassword("");
+        setAvatar();
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err.response.data.message);
+        toast.error(err.response.data.message);
       });
   };
 
