@@ -12,7 +12,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
 
-  const submitHandle = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     await axios
@@ -25,27 +25,25 @@ const Login = () => {
         { withCredentials: true }
       )
       .then((res) => {
-        toast.success("Login successful");
+        toast.success("Login Success!");
         navigate("/");
+        window.location.reload(true); 
       })
-      .catch((error) => {
-        toast.error(error.response.data.message);
-        // console.log(error);
+      .catch((err) => {
+        toast.error(err.response.data.message);
       });
   };
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Kissy Store
+          Login to your account
         </h2>
       </div>
-
-      {/* Login Form start */}
-
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <form className="space-y-6" onSubmit={submitHandle}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="email"
@@ -97,8 +95,8 @@ const Login = () => {
                 )}
               </div>
             </div>
-            <div className={`${styles.normalFlex} justify-between`}>
-              <div className={`${styles.normalFlex}`}>
+            <div className={`${styles.noramlFlex} justify-between`}>
+              <div className={`${styles.noramlFlex}`}>
                 <input
                   type="checkbox"
                   name="remember-me"
@@ -109,7 +107,7 @@ const Login = () => {
                   htmlFor="remember-me"
                   className="ml-2 block text-sm text-gray-900"
                 >
-                  Rmember me
+                  Remember me
                 </label>
               </div>
               <div className="text-sm">
@@ -124,23 +122,20 @@ const Login = () => {
             <div>
               <button
                 type="submit"
-                className="group relative w-full h-[40px] flex justify-center 
-              py-2 px-4 border border-transparent text-sm font-medium 
-              rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
                 Submit
               </button>
             </div>
-            <div className={`${styles.normalFlex} w-full`}>
-              <h4>Don't have an account?</h4>
-              <Link to="/emailsignup" className="text-blue-600 pl-2">
+            <div className={`${styles.noramlFlex} w-full`}>
+              <h4>Not have any account?</h4>
+              <Link to="/sign-up" className="text-blue-600 pl-2">
                 Sign Up
               </Link>
             </div>
           </form>
         </div>
       </div>
-      {/* Login Form end */}
     </div>
   );
 };

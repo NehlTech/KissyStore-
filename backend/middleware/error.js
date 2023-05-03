@@ -4,28 +4,27 @@ module.exports = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
   err.message = err.message || "Internal server Error";
 
-  // db error
-
+  // wrong mongodb id error
   if (err.name === "CastError") {
-    const message = `Resources not found with this id. Invalid ${err.path}`;
+    const message = `Resources not found with this id.. Invalid ${err.path}`;
     err = new ErrorHandler(message, 400);
   }
 
-  // key error
+  // Duplicate key error
   if (err.code === 11000) {
-    const message = `Key duplicated ${Object.keys(err.keyValue)}`;
+    const message = `Duplicate key ${Object.keys(err.keyValue)} Entered`;
     err = new ErrorHandler(message, 400);
   }
 
-  // token error
+  // wrong jwt error
   if (err.name === "JsonWebTokenError") {
-    const message = `Url is invalid`;
+    const message = `Your url is invalid please try again letter`;
     err = new ErrorHandler(message, 400);
   }
 
-  // token expired
+  // jwt expired
   if (err.name === "TokenExpiredError") {
-    const message = `Url is expired`;
+    const message = `Your Url is expired please try again letter!`;
     err = new ErrorHandler(message, 400);
   }
 

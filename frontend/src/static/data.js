@@ -191,72 +191,73 @@ export const brandingData = [
 export const categoriesData = [
   {
     id: 1,
-    title: "Computers and Laptops",
+    title: "Wooden Hand Crafted Artifacts",
     subTitle: "",
     image_Url:
-      "https://cdn.shopify.com/s/files/1/1706/9177/products/NEWAppleMacbookProwithM1ProChip14InchLaptop2021ModelMKGQ3LL_A_16GB_1TBSSD_custommacbd.jpg?v=1659592838",
+      "https://i.etsystatic.com/22063364/r/il/f2aeca/4895563217/il_680x540.4895563217_cyhy.jpg",
   },
   {
     id: 2,
-    title: "cosmetics and body care",
+    title: "Sculptures",
     subTitle: "",
     image_Url:
-      "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/kosme1.png",
+      "https://i.etsystatic.com/19272742/r/il/5658b2/3551315170/il_680x540.3551315170_s60u.jpg",
   },
   {
     id: 3,
-    title: "Accesories",
+    title: "Decorative Painting",
     subTitle: "",
     image_Url:
-      "https://img.freepik.com/free-vector/ordering-goods-online-internet-store-online-shopping-niche-e-commerce-website-mother-buying-babies-clothes-footwear-toys-infant-accessories_335657-2345.jpg?w=2000",
+      "https://i.etsystatic.com/32159054/r/il/cfed2b/4564204046/il_680x540.4564204046_o821.jpg",
   },
   {
     id: 4,
-    title: "Cloths",
+    title: "Beads",
     subTitle: "",
     image_Url:
-      "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+      "https://i.etsystatic.com/8634452/r/il/11d53f/3509893904/il_680x540.3509893904_t13w.jpg",
   },
   {
     id: 5,
-    title: "Shoes",
+    title: "Bracelets",
     subTitle: "",
     image_Url:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBQPQMVNRd6TtDkGs2dCri0Y-rxKkFOiEWw&usqp=CAU",
+      "https://i.etsystatic.com/18592077/r/il/f94b9b/3943109007/il_fullxfull.3943109007_4p4x.jpg",
   },
   {
     id: 6,
-    title: "Gifts",
+    title: "Clothes",
     subTitle: "",
     image_Url:
-      "https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg",
+      "https://i.etsystatic.com/35089570/r/il/e45ef3/4020245426/il_680x540.4020245426_4389.jpg",
   },
   {
     id: 7,
-    title: "Pet Care",
+    title: "Beaded Cap",
     subTitle: "",
-    image_Url: "https://cdn.openpr.com/T/c/Tc15444071_g.jpg",
+    image_Url:
+      "https://i.etsystatic.com/29829683/r/il/a6f24c/4662351692/il_680x540.4662351692_l935.jpg",
   },
   {
     id: 8,
-    title: "Mobile and Tablets",
+    title: "Kids Corner",
     subTitle: "",
     image_Url:
-      "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mpwp3tua-apple-iphone-14-256gb-mavi-mpwp3tua-637986832343472449.jpg",
+      "https://i.etsystatic.com/16414037/r/il/488734/3658583298/il_680x540.3658583298_agh9.jpg",
   },
   {
     id: 9,
-    title: "Music and Gaming",
+    title: "Entertainment",
     subTitle: "",
     image_Url:
-      "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
+      "https://i.etsystatic.com/19380499/r/il/20158e/4839391291/il_680x540.4839391291_pmbq.jpg",
   },
   {
     id: 10,
     title: "Others",
     subTitle: "",
     image_Url:
-      "https://searchspring.com/wp-content/uploads/2022/10/Hero-Image-Platform-Others-2.png",
+      "https://i.etsystatic.com/41020125/r/il/e8cac6/4655527129/il_680x540.4655527129_b023.jpg",
   },
 ];
 
@@ -264,22 +265,22 @@ export const categoriesData = [
 export const productData = [
   {
     id: 1,
-    category: "Computers and Laptops",
-    name: "MacBook pro M2 chipset 256gb ssd 8gb ram space-gray color with apple 1 year warranty",
+    category: "Wooden Hand Crafted Artifacts",
+    name: "Vintage Ukama Mother and Child Maternal Devotion 21” Tall Hand Carved Original Abstract Mid Century Modern Wooden Statue Made in Ghana",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "This stunning vintage hand-carved Ukama Mother and Child statue is a beautiful representation of maternal devotion. Standing 21 inches tall, this original abstract mid-century modern wooden statue is a rare find that was made in Ghana. The intricate hand-carved details of the statue highlight the skill and craftsmanship of the artist who created it. The abstract design gives the piece a unique and modern feel while still capturing the emotional connection between a mother and child. The Ukama Mother and Child statue is made from high-quality wood, which adds to the durability and longevity of the piece. The warm tones of the wood give the statue a natural and earthy feel that will complement any home decor style. This vintage statue is not only a beautiful piece of art but also a meaningful and symbolic representation of the bond between a mother and child. It would make a perfect addition to any home or office, adding a touch of culture and history to any space. If you're looking for a one-of-a-kind, hand-crafted piece of art that is both visually stunning and emotionally meaningful, this Ukama Mother and Child statue is an excellent choice.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://www.istorebangladesh.com/images/thumbs/0000286_macbook-pro-m1_550.png",
+        url: "https://i.etsystatic.com/22063364/r/il/f2aeca/4895563217/il_680x540.4895563217_cyhy.jpg",
       },
       {
         public_id: "test",
-        url: "https://www.istorebangladesh.com/images/thumbs/0000286_macbook-pro-m1_550.png",
+        url: "https://i.etsystatic.com/22063364/r/il/f2aeca/4895563217/il_680x540.4895563217_cyhy.jpg",
       },
     ],
     shop: {
-      name: "Apple inc.",
+      name: "Kissy Store.",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -291,55 +292,57 @@ export const productData = [
     rating: 4,
     total_sell: 35,
     stock: 10,
+    category: "Wooden Hand Crafted",
   },
   {
     id: 2,
-    category: "Mobile and Tablets",
-    name: "Iphone 14 pro max 256 gb ssd and 8 gb ram silver colour",
+    category: "Sculptures",
+    name: "African Modern Statue",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "Ebony Modern Statuette from Ghana. (Blst17000) This magnificent sculpture is a Modern ebony statuette from the shores of Ghana, West Africa. Crafted from precious ebony wood, it is polished till it achieves its beautiful shine and carved to a hyper-feminine shape. It is then covered in the more fragile raffia to further accentuate its femininity. The classic wide hips of the African woman are celebrated here and is a great tribute to the women. Found in almost every Ghanaian home, it is really a national treasure. This piece was handpicked and collected by Blawo. Shipped with a Blawo Certificate of Authenticity.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
+        url: "https://i.etsystatic.com/19272742/r/il/5658b2/3551315170/il_680x540.3551315170_s60u.jpg",
       },
       {
         public_id: "test",
-        url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
+        url: "https://i.etsystatic.com/19272742/r/il/5658b2/3551315170/il_680x540.3551315170_s60u.jpg",
       },
     ],
     shop: {
-      name: "Amazon Ltd",
+      name: "Kissy Store.",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
       },
       ratings: 4.2,
     },
+    price: 2003,
     discount_price: 1099,
     rating: 5,
     total_sell: 80,
     stock: 10,
-    category: "Mobile & Tablets",
+    category: "Sculptures",
   },
   {
-    id: 1,
-    category: "Computers and Laptop",
-    name: "MacBook pro M2 chipset 256gb ssd 8gb ram space gray color with apple 1 year warranty",
+    id: 3,
+    category: "Painting",
+    name: "Canvas Wall Art",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "Experience the beauty of Ghana with this stunning printed canvas. The high-quality print captures the vibrant colours and unique culture of this West African country, making it the perfect addition to any room. The canvas is stretched and mounted on a wooden frame, ready to hang on your wall. The print is available in various sizes, making it a great fit for any space. Whether you're looking to add a touch of African culture to your living room, or create a focal point in your office, this canvas is sure to impress. Order yours today and bring a piece of Ghana into your home!",
     image_Url: [
       {
         public_id: "test",
-        url: "https://www.istorebangladesh.com/images/thumbs/0000286_macbook-pro-m1_550.png",
+        url: "https://i.etsystatic.com/32159054/r/il/cfed2b/4564204046/il_680x540.4564204046_o821.jpg",
       },
       {
         public_id: "test",
-        url: "https://www.istorebangladesh.com/images/thumbs/0000286_macbook-pro-m1_550.png",
+        url: "https://i.etsystatic.com/32159054/r/il/cfed2b/4564204046/il_680x540.4564204046_o821.jpg",
       },
     ],
     shop: {
-      name: "Apple inc.",
+      name: "Kissy Store.",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -351,26 +354,26 @@ export const productData = [
     rating: 4,
     total_sell: 75,
     stock: 10,
-    category: "Computers & Laptop",
+    category: "Painting",
   },
   {
     id: 4,
     category: "Others",
-    name: "New Fashionable Watch for men 2023 with multiple colors",
+    name: "Portrait Art",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "Colorful drawing is made with oil pastel colors on velour paper. Oil pastels on velour make this African wall art so special and live.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://i0.wp.com/eccocibd.com/wp-content/uploads/2022/01/1802NL02_1.png?fit=550%2C550&ssl=1",
+        url: "https://i.etsystatic.com/13551488/c/2062/1639/0/431/il/1935a4/4208175183/il_680x540.4208175183_j4wj.jpg",
       },
       {
         public_id: "test",
-        url: "https://i0.wp.com/eccocibd.com/wp-content/uploads/2022/01/1802NL02_1.png?fit=550%2C550&ssl=1",
+        url: "https://i.etsystatic.com/13551488/c/2062/1639/0/431/il/1935a4/4208175183/il_680x540.4208175183_j4wj.jpg",
       },
     ],
     shop: {
-      name: "Shahriar Watch House",
+      name: "Kissy Store",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -386,22 +389,22 @@ export const productData = [
   },
   {
     id: 5,
-    category: "Shoes",
+    category: "Beads",
     name: "New Trend shoes for gents with all sizes",
     description:
       "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RLV0015/2-800x800.jpg",
+        url: "https://i.etsystatic.com/8634452/r/il/11d53f/3509893904/il_680x540.3509893904_t13w.jpg",
       },
       {
         public_id: "test",
-        url: "https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RLV0015/2-800x800.jpg",
+        url: "https://i.etsystatic.com/8634452/r/il/11d53f/3509893904/il_680x540.3509893904_t13w.jpg",
       },
     ],
     shop: {
-      name: "Alisha Shoes Mart",
+      name: "Kissy Store",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -413,25 +416,25 @@ export const productData = [
     rating: 5,
     total_sell: 49,
     stock: 10,
-    category: "Shoes",
+    category: "Beads",
   },
   {
     id: 1,
-    name: "Gaming Headphone Asus with mutiple color and free delivery",
+    name: "Kids Wear",
     description:
       "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://www.startech.com.bd/image/cache/catalog/headphone/havit/h763d/h763d-02-500x500.jpg",
+        url: "https://i.etsystatic.com/35089570/r/il/e45ef3/4020245426/il_680x540.4020245426_4389.jpg",
       },
       {
         public_id: "test",
-        url: "https://eratablet.com/wp-content/uploads/2022/08/H51ba6537405f4948972e293927673546u.jpg",
+        url: "https://i.etsystatic.com/36770716/r/il/926667/4048147288/il_680x540.4048147288_416w.jpg",
       },
     ],
     shop: {
-      name: "Asus Ltd",
+      name: "Kissy Store",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -452,25 +455,25 @@ export const productData = [
     ],
     total_sell: 20,
     stock: 10,
-    category: "Music and Gaming",
+    category: "Beads",
   },
   {
     id: 4,
-    name: "New Fashionable Watch for men 2023 with multiple colors",
+    name: "Beaded Cap",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "African Chieftaincy Wedding Hat. Igbo Ozo Cap, African Men's Wedding Velvet Cap/Beaded Cap. Nigerian Special Traditional Men Hat, beaded cap for men",
     image_Url: [
       {
         public_id: "test",
-        url: "https://i0.wp.com/eccocibd.com/wp-content/uploads/2022/01/1802NL02_1.png?fit=550%2C550&ssl=1",
+        url: "https://i.etsystatic.com/29829683/r/il/a6f24c/4662351692/il_680x540.4662351692_l935.jpg",
       },
       {
         public_id: "test",
-        url: "https://i0.wp.com/eccocibd.com/wp-content/uploads/2022/01/1802NL02_1.png?fit=550%2C550&ssl=1",
+        url: "https://i.etsystatic.com/29829683/r/il/a6f24c/4662351692/il_680x540.4662351692_l935.jpg",
       },
     ],
     shop: {
-      name: "Shahriar Watch House",
+      name: "Kissy Store.",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -485,21 +488,21 @@ export const productData = [
   },
   {
     id: 1,
-    name: "Gaming Headphone Asus with mutiple color and free delivery",
+    name: "Kids Corner",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "This gorgeous African Kids Boys Agbada Traditional Shirt 3 Piece Set is the perfect attire for a child for any tradional/special occasion. It comes as a 3 piece set including trousers, top as well as the agbada shirt. Your child is surely to be the best dressed at any occasion!",
     image_Url: [
       {
         public_id: "test",
-        url: "https://www.startech.com.bd/image/cache/catalog/headphone/havit/h763d/h763d-02-500x500.jpg",
+        url: "https://i.etsystatic.com/16414037/r/il/488734/3658583298/il_680x540.3658583298_agh9.jpg",
       },
       {
         public_id: "test",
-        url: "https://eratablet.com/wp-content/uploads/2022/08/H51ba6537405f4948972e293927673546u.jpg",
+        url: "https://i.etsystatic.com/16414037/r/il/488734/3658583298/il_680x540.3658583298_agh9.jpg",
       },
     ],
     shop: {
-      name: "Asus Ltd",
+      name: "Kissy Store.",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -523,22 +526,22 @@ export const productData = [
   },
   {
     id: 2,
-    category: "Mobile and Tablets",
-    name: "Iphone 14 pro max 256 gb ssd and 8 gb ram silver colour",
+    category: "Entertainment",
+    name: "Djembe wooden drum",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "All drums are made entirely by hand in Africa. Natural imperfections can occur in the wood or skin, but this has no effect on the sound or quality of the drum. The handmade wooden body consists of a trunk. Have fun playing this African Djembe.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
+        url: "https://i.etsystatic.com/19380499/r/il/20158e/4839391291/il_680x540.4839391291_pmbq.jpg",
       },
       {
         public_id: "test",
-        url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
+        url: "https://i.etsystatic.com/19380499/r/il/20158e/4839391291/il_680x540.4839391291_pmbq.jpg",
       },
     ],
     shop: {
-      name: "Amazon Ltd",
+      name: "Kissy Store",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -552,22 +555,22 @@ export const productData = [
   },
   {
     id: 1,
-    category: "Music and Gaming",
+    category: "Crafted Artifacts",
     name: "Gaming Headphone Asus with mutiple color and free delivery",
     description:
       "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://www.startech.com.bd/image/cache/catalog/headphone/havit/h763d/h763d-02-500x500.jpg",
+        url: "https://i.etsystatic.com/22063364/r/il/f2aeca/4895563217/il_680x540.4895563217_cyhy.jpg",
       },
       {
         public_id: "test",
-        url: "https://eratablet.com/wp-content/uploads/2022/08/H51ba6537405f4948972e293927673546u.jpg",
+        url: "https://i.etsystatic.com/22063364/r/il/f2aeca/4895563217/il_680x540.4895563217_cyhy.jpg",
       },
     ],
     shop: {
-      name: "Asus Ltd",
+      name: "Kissy Store",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -613,16 +616,16 @@ export const footerProductLinks = [
 
 export const footercompanyLinks = [
   {
-    name: "Game & Video",
+    name: "Crafted Artifacts",
   },
   {
-    name: "Phone &Tablets",
+    name: "Sculptures",
   },
   {
-    name: "Computers & Laptop",
+    name: "Painting",
   },
   {
-    name: "Sport Watches",
+    name: "Beads",
   },
   {
     name: "Events",

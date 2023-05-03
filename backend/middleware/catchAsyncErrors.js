@@ -1,3 +1,3 @@
-module.exports = (myFunc) => (request, result, next) => {
-  Promise.resolve(myFunc(request, result, next)).catch(next);
+module.exports = (theFunc) => (req, res, next) => {
+  Promise.resolve(theFunc(req, res, next)).catch(next);
 };

@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "../../../styles/styles";
 import { Link } from "react-router-dom";
+import styles from "../../../styles/styles";
 
 const Hero = () => {
   return (
     <div
-      className={`relative min-h-[70vh] 800px:min-h-[80vh] w-50% bg-no-repeat ${styles.normalFlex}`}
+      className={`relative min-h-[70vh] 800px:min-h-[80vh] w-full bg-no-repeat ${styles.noramlFlex}`}
       style={{
         backgroundImage:
           "url(https://sothebys-com.brightspotcdn.com/dims4/default/c4d4d2f/2147483647/strip/true/crop/5062x1775+0+0/resize/2000x701!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2F39%2F99%2F8ba5bb19492ea00d6fc627bb7e39%2Fhk1219-marketing-banner.jpg)",
@@ -25,7 +25,7 @@ const Hero = () => {
         </p>
         <Link to="/products" className="inline-block">
           <div className={`${styles.button} mt-5`}>
-            <span className="text-[#ffffff] font-[Poppins] text-[18px]">
+            <span className="text-[#fff] font-[Poppins] text-[18px]">
               Shop Now
             </span>
           </div>

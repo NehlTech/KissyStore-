@@ -7,42 +7,40 @@ import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
 
-const Signup = () => {
+const Singup = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [avatar, setAvatar] = useState(null);
   const [visible, setVisible] = useState(false);
-  // const navigate = useNavigate();
+  const [avatar, setAvatar] = useState(null);
 
-  const fileInputChangeHandle = (e) => {
+  const handleFileInputChange = (e) => {
     const file = e.target.files[0];
     setAvatar(file);
   };
 
-  const submitHandle = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const config = { headers: { "Content-Type": "multipart/form-data" } };
-    const new_form = new FormData();
-    new_form.append("file", avatar);
-    new_form.append("name", name);
-    new_form.append("email", email);
-    new_form.append("password", password);
+
+    const newForm = new FormData();
+
+    newForm.append("file", avatar);
+    newForm.append("name", name);
+    newForm.append("email", email);
+    newForm.append("password", password);
+
     axios
-      .post(`${server}/user/create-user`, new_form, config)
+      .post(`${server}/user/create-user`, newForm, config)
       .then((res) => {
-        //   if (res.data.success === true) {
-        //     navigate("/");
-        //   }
         toast.success(res.data.message);
         setName("");
         setEmail("");
         setPassword("");
         setAvatar();
       })
-      .catch((err) => {
-        // console.log(err.response.data.message);
-        toast.error(err.response.data.message);
+      .catch((error) => {
+        toast.error(error.response.data.message);
       });
   };
 
@@ -53,12 +51,9 @@ const Signup = () => {
           Sign up to see artifacts from Africa
         </h2>
       </div>
-
-      {/* Register Form start */}
-
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <form className="space-y-6" onSubmit={submitHandle}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="email"
@@ -78,6 +73,7 @@ const Signup = () => {
                 />
               </div>
             </div>
+
             <div>
               <label
                 htmlFor="email"
@@ -97,6 +93,7 @@ const Signup = () => {
                 />
               </div>
             </div>
+
             <div>
               <label
                 htmlFor="password"
@@ -129,6 +126,7 @@ const Signup = () => {
                 )}
               </div>
             </div>
+
             <div>
               <label
                 htmlFor="avatar"
@@ -138,9 +136,9 @@ const Signup = () => {
                 <span className="inline-block h-8 w-8 rounded-full overflow-hidden">
                   {avatar ? (
                     <img
-                      className="h-full w-full object-cover rounded-full"
                       src={URL.createObjectURL(avatar)}
                       alt="avatar"
+                      className="h-full w-full object-cover rounded-full"
                     />
                   ) : (
                     <RxAvatar className="h-8 w-8" />
@@ -148,44 +146,40 @@ const Signup = () => {
                 </span>
                 <label
                   htmlFor="file-input"
-                  className="ml-5 flex items-center justify-center px-4 py-2 
-                border border-gray-300 rounded-md shadow-sm text-sm font-medium
-                 text-gray-700 bg-white hover:bg-gray-50"
+                  className="ml-5 flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
                 >
                   <span>Upload a file</span>
                   <input
                     type="file"
                     name="avatar"
                     id="file-input"
-                    accept=".jpg, .jpeg, .png"
-                    onChange={fileInputChangeHandle}
+                    accept=".jpg,.jpeg,.png"
+                    onChange={handleFileInputChange}
                     className="sr-only"
                   />
                 </label>
               </div>
             </div>
+
             <div>
               <button
                 type="submit"
-                className="group relative w-full h-[40px] flex justify-center 
-              py-2 px-4 border border-transparent text-sm font-medium 
-              rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
                 Submit
               </button>
             </div>
-            <div className={`${styles.normalFlex} w-full`}>
-              <h4>Have an account?</h4>
-              <Link to="/login" className="text-green-600 pl-2">
-                Log in
+            <div className={`${styles.noramlFlex} w-full`}>
+              <h4>Already have an account?</h4>
+              <Link to="/login" className="text-blue-600 pl-2">
+                Sign In
               </Link>
             </div>
           </form>
         </div>
       </div>
-      {/* Login Form end */}
     </div>
   );
 };
 
-export default Signup;
+export default Singup;
